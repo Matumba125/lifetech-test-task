@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { fetchUsers, fetchUserRepos } from '../model/userReducer';
 import { useAppDispatch } from '../../../app/store/store';
 import UserData from '../../../widgets/userData/userData';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import { getUserRepositories } from '../../app/store/selectors';
 import Pagination from './pagination/pagination';

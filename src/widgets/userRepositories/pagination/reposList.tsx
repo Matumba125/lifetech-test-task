@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { RepoData } from '../../../app/types/types';
 import style from '../userRepositories.module.css';
 

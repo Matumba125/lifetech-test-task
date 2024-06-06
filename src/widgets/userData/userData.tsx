@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import { getUserData } from '../../app/store/selectors';
 import style from './userData.module.css';

@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 import style from './header.module.css';
 import logo from '../../shared/icons/header/githubLogo.svg';
 import searchIcon from '../../shared/icons/header/searchIcon.svg';
