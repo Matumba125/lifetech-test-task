@@ -1,0 +1,34 @@
+.header{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    box-sizing: border-box;
+    height: 72px;
+    width: 100%;
+    padding: 16px 41px;
+    background-color: #0064EB;
+}
+
+.searchInputWrapper{
+    position: relative;
+}
+
+.searchInput{
+    background-color: #fff;
+    width: 500px;
+    height: 40px;
+    padding: 8px 10px 8px 44px;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.searchIcon{
+    position: absolute;
+    top: 8px;
+    left: 14px;
+}
+
+input:focus{
+    outline: none;
+}

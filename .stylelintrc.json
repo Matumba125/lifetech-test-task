@@ -2,7 +2,8 @@
   "rules": {
     "alpha-value-notation": "number",
     "selector-max-id": 0,
-    "color-function-notation": "modern"
+    "color-function-notation": "modern",
+    "selector-class-pattern": "(^[a-z]|[A-Z0-9])[a-z]*"
   },
   "defaultSeverity": "warning"
 }
