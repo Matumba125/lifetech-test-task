@@ -10,5 +10,5 @@ export const getUser = (userName: string) => {
 };
 
 export const getRepositories = (userName: string) => {
-  return axiosLiveInstance.get<RepoData>(`/users/${userName}/repos`);
+  return axiosLiveInstance.get<RepoData[]>(`/users/${userName}/repos`);
 };
