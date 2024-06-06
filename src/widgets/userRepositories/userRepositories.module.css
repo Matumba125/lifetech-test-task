@@ -1,0 +1,70 @@
+.userRepositoriesWrapper{
+    width: 100%;
+}
+
+.paginationWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #808080;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.pagination ul{
+    padding-inline-start: 16px;
+}
+
+.pageItem, .pageNav, .activePage{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.activePage{
+    background-color: #0064EB;
+    color: #fff;
+}
+
+.reposWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.repoItem{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    height: 112px;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.repoItem h2{
+    font-size: 24px;
+    font-weight: 500;
+    color: #0064EB;
+    margin: 0;
+}
+
+.repoItem p{
+    font-size: 16px;
+    margin: 0;
+}
