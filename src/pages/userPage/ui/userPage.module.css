@@ -1,4 +1,7 @@
 .userWrapper{
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    padding: 40px 56px;
+    gap: 96px;
 }

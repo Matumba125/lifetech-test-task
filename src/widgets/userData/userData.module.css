@@ -1,6 +1,38 @@
 .userDataWrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 28px;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.userInfo h2{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.userInfo a{
+    font-size: 18px;
+    font-weight: 400;
+    color: #0064EB;
+    text-decoration: none;
+}
+
+.followInfo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.followInfo div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }

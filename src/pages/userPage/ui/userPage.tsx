@@ -9,7 +9,7 @@ const UserPage = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const username = 'Matumba125';
+    const username = 'gaearon';
     dispatch(fetchUsers(username));
     dispatch(fetchUserRepos(username));
   }, [dispatch]);
