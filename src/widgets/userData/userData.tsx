@@ -5,9 +5,18 @@ import Avatar from '../../shared/ui/avatar/avatar';
 import followersIcon from '../../shared/icons/userPage/followers.svg';
 import followingIcon from '../../shared/icons/userPage/following.svg';
 import { formatFollowCount } from '../../shared/utils/formatFollowCount/formatFollowCount';
+import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 
 const UserData = () => {
   const userData = useSelector(getUserData);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!userData) {
+      navigate('/');
+    }
+  }, []);
 
   return (
     <>

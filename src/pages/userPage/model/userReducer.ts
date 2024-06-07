@@ -1,16 +1,23 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RepoData, UserData } from '../../../app/types/types';
 import { getRepositories, getUser } from '../../../app/api/api';
 import axios from 'axios';
 
+export type ErrorsType = {
+  reposEmpty?: boolean;
+  userNotFound?: boolean;
+};
+
 type InitialStateType = {
   userData?: UserData;
   repos?: RepoData[];
+  errors: ErrorsType;
 };
 
 const initialState: InitialStateType = {
   userData: undefined,
   repos: undefined,
+  errors: {},
 };
 
 export const fetchUsers = createAsyncThunk<UserData, string>(
@@ -47,19 +54,28 @@ const slice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setUserData(state, action: PayloadAction<{ userData: UserData }>) {
-      state.userData = action.payload.userData;
-    },
-    setRepos(state, action: PayloadAction<{ repos: RepoData[] }>) {
-      state.repos = action.payload.repos;
+    setErrors(state) {
+      state.errors.userNotFound = false;
+      state.errors.reposEmpty = false;
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchUsers.fulfilled, (state, action) => {
+    builder.addCase(fetchUsers.fulfilled, (state: InitialStateType, action) => {
       state.userData = action.payload;
+      state.errors.userNotFound = false;
     });
-    builder.addCase(fetchUserRepos.fulfilled, (state, action) => {
-      state.repos = action.payload;
+    builder.addCase(fetchUsers.rejected, (state: InitialStateType) => {
+      state.errors.userNotFound = true;
+    });
+    builder.addCase(
+      fetchUserRepos.fulfilled,
+      (state: InitialStateType, action) => {
+        state.repos = action.payload;
+        state.errors.reposEmpty = false;
+      },
+    );
+    builder.addCase(fetchUserRepos.rejected, (state: InitialStateType) => {
+      state.errors.reposEmpty = true;
     });
   },
 });
