@@ -10,7 +10,7 @@ const UserRepositories = () => {
 
   return (
     <>
-      {reposEmpty === false ? (
+      {!reposEmpty ? (
         <div className={style.userRepositoriesWrapper}>
           {repos && (
             <div>
