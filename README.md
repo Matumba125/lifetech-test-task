@@ -41,8 +41,8 @@ Use the GitHub API to fetch user and repository data:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/github-repo-search.git
-   cd github-repo-search
+   https://github.com/Matumba125/lifetech-test-task.git
+   cd lifetech-test-task
 
 
 2. **Install dependencies:**
