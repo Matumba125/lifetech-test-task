@@ -47,17 +47,11 @@ Use the GitHub API to fetch user and repository data:
 
 2. **Install dependencies:**
    ```bash
-   npm install
+   yarn install
 
-3. **Set up environment variables:**
-
-    Create a .env file in the root directory and add your GitHub API token:
+3**Run the development server:**
    ```bash
-   REACT_APP_GITHUB_TOKEN=your_github_token
-
-4. **Run the development server:**
-   ```bash
-   npm install
+   yarn dev
 
 ## Linting and Formatting
 - **eslint**: For JavaScript/TypeScript linting.
